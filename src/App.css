@@ -1,38 +1,116 @@
+body {
+  background-color: rgb(104, 173, 238);
+  background-image: url('./icons/summer.svg');
+  background-size: cover;
+	background-position:  center, center;
+  background-repeat: no-repeat;
+  color: rgb(12, 66, 73);
+}
+
+
+
 .App {
   text-align: center;
+  letter-spacing: 2.5px;
+  grid-template-columns: 1fr max-content 1fr;
+  display: grid;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#displayDate {
+  grid-column: 2;
+} 
+
+#inputs {
+  grid-column: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#header {
+  grid-column: 2;
+}
+
+
+input {
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: .5rem;
+  margin: .4rem;
+  background: rgba(168, 222, 240, 0.274);
+  border-radius: .8rem;
+  border: none;
+  font-family: 'Sarabun', sans-serif;
+  outline: none;
+}
+
+button {
+  border: .1rem solid black;
+  border-radius: .4rem;
+  background:  rgb(63, 146, 201);
+  padding: .8rem;
+  text-transform: uppercase;
+  transition: color 950ms, background-color 950ms;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  outline: none;
+}
+
+button:hover {
+  color: aliceblue;
+  background-color: rgba(57, 181, 223, 0.822);
+  cursor: pointer;
+}
+
+#section {
+  display: grid;
+  background-color: rgba(82, 135, 214, 0.459);
+  grid-template-columns: repeat(6, 1fr);
+  border-radius: .8rem;
+  margin: 1rem;
+  box-shadow: 4px 4px 4px rgb(46, 85, 129);
+}
+
+#weather {
+  color: rgb(5, 54, 77);
+}
+
+
+@media screen and (max-width: 1200px) {
+  #section {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 740px) {
+  .App {
+    font-size: .7rem;
   }
-  to {
-    transform: rotate(360deg);
+  input {
+    padding: .4rem;
+  }
+  #section {
+    grid-template-columns: 1fr; 
+  }
+  #weathercontainer {
+   font-size: .9rem;
+  }
+  #weather {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 740px) {
+  .App {
+    font-size: .6rem;
+  }
+  input {
+    padding: .4rem;
+  }
+  #section {
+    grid-template-columns: .8fr; 
+  }
+  #weathercontainer {
+   font-size: .8rem;
+  }
+  #weather {
+    font-size: .8rem;
   }
 }
