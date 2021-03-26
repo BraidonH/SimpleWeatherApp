@@ -23,7 +23,7 @@ export default function Inputs()  {
       }
 
     function apiCall() {
-      const YOUR_ACCESS_KEY = "24cf2be62f50db798e80fd85dd76d12d"
+      const YOUR_ACCESS_KEY = "YOUR_API_KEY"
       fetch(`http://api.weatherstack.com/current?access_key=${YOUR_ACCESS_KEY}&query=${values.city},${values.state}`)
       .then(res => res.json()).then(data => {
            setWeather(data.current)
